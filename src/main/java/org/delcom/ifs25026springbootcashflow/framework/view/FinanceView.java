@@ -20,6 +20,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.streams.UploadHandler;
 import org.delcom.ifs25026springbootcashflow.adapter.presenter.FinancePresenter;
 import org.delcom.ifs25026springbootcashflow.adapter.storage.FileStorage;
@@ -42,6 +43,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * Dashboard cashflow milik pengguna yang sedang login.
  */
 @Route(value = "", layout = MainLayout.class)
+@RouteAlias(value = "dashboard", layout = MainLayout.class)
 @PageTitle("Cashflow")
 public class FinanceView extends VerticalLayout {
 

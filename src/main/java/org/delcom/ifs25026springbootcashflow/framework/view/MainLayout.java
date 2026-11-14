@@ -314,6 +314,12 @@ public class MainLayout extends AppLayout implements BeforeEnterObserver, AfterN
         if (normalized.startsWith("/")) {
             normalized = normalized.substring(1);
         }
+        // Path alias dianggap sama dengan halaman tujuannya.
+        if ("dashboard".equals(normalized)) {
+            normalized = "";
+        } else if ("settings".equals(normalized)) {
+            normalized = "profile";
+        }
 
         for (NavEntry entry : navEntries) {
             boolean active;
